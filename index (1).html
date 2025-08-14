@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>TradeNest — Smart Investment Solutions</title>
+<style>
+/* Inline, Sites-friendly (no external files) */
+:root{--muted:#64748b;--brand:#2563eb;--brand2:#22d3ee}
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;color:#0f172a}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+h1,h2,h3{line-height:1.2;margin:0 0 .5rem}h1{font-size:clamp(2rem,4vw,3rem)}h2{font-size:clamp(1.5rem,3vw,2rem)}
+.container{width:min(1000px,94vw);margin:0 auto}
+.header{position:relative;background:linear-gradient(180deg,#06122a,#0b1938);color:#e6edf6;padding:64px 0 32px}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 0 0}
+.brand{display:flex;gap:.5rem;align-items:center;font-weight:700;color:#e6edf6;text-decoration:none}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(90deg,var(--brand),var(--brand2))}
+.menu{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.menu a{color:#e6edf6;opacity:.9} .menu a:hover{opacity:1;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:24px 0}
+.lead{color:#d1e1ff;max-width:48ch}
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:.7rem;font-weight:600;border:1px solid #93c5fd;background:transparent;color:#e5f0ff;box-shadow:0 8px 16px rgba(0,0,0,.15)}
+.btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand2));border:0;color:#fff}
+.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin:10px 0 0;padding:0;list-style:none}
+.badges li{border:1px solid rgba(255,255,255,.35);color:#e6edf6;border-radius:999px;padding:.3rem .6rem;font-size:.85rem}
+.section{padding:56px 0}.section.alt{background:#f8fafc}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1rem;box-shadow:0 3px 10px rgba(0,0,0,.06)}
+.card.popular{border-width:2px;border-color:#60a5fa;position:relative}
+.card.popular:after{content:"Popular";position:absolute;top:.6rem;right:.6rem;background:#2563eb;color:#fff;font-size:.75rem;padding:.2rem .45rem;border-radius:.4rem}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.step{background:#fff;border:1px solid #e5e7eb;border-radius:1rem;padding:1rem;position:relative}
+.step .n{position:absolute;top:-10px;left:-10px;background:#111;color:#fff;width:28px;height:28px;display:grid;place-items:center;border-radius:999px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:1rem}
+label{display:block;font-weight:600;margin:.25rem 0}.field{margin:.7rem 0}
+input,textarea{width:100%;padding:.7rem .8rem;border:1px solid #cbd5e1;border-radius:.7rem;font:inherit}
+small.error{color:#b91c1c;min-height:1em;display:block}
+footer{background:#0f172a;color:#e5e7eb;padding:24px 0;margin-top:24px}
+@media (max-width: 980px){.hero,.cards,.timeline,.grid2{grid-template-columns:1fr}.menu{display:none}}
+</style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="#"><span class="dot"></span> TradeNest</a>
+        <ul class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#plans">Plans</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <div>
+          <h1>Grow Your Wealth Safely &amp; Efficiently</h1>
+          <p class="lead">Professional investing with clear process, risk controls, and disciplined execution.</p>
+          <p>
+            <a href="#plans" class="btn primary">Invest Now</a>
+            <a href="#contact" class="btn">Talk to Us</a>
+          </p>
+          <ul class="badges"><li>Low Risk</li><li>Transparent</li><li>Responsive Support</li></ul>
+        </div>
+        <div>
+          <svg viewBox="0 0 800 520" role="img" aria-label="Growth chart" style="width:100%;height:auto;border-radius:1rem">
+            <defs>
+              <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#08142c"/><stop offset="1" stop-color="#0b1b3a"/></linearGradient>
+              <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#60a5fa"/></linearGradient>
+            </defs>
+            <rect width="800" height="520" fill="url(#bg)"/>
+            <g opacity=".25" stroke="#fff" stroke-width="1">
+              <path d="M0 420H800M0 340H800M0 260H800M0 180H800M0 100H800"/>
+              <path d="M80 520V60M200 520V60M320 520V60M440 520V60M560 520V60M680 520V60"/>
+            </g>
+            <polyline fill="none" stroke="url(#line)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"
+              points="60,420 140,360 210,380 290,300 350,320 420,240 500,260 580,190 640,220 720,160"/>
+            <g fill="#22d3ee">
+              <circle cx="140" cy="360" r="6"/><circle cx="290" cy="300" r="6"/><circle cx="420" cy="240" r="6"/>
+              <circle cx="580" cy="190" r="6"/><circle cx="720" cy="160" r="6"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="section alt">
+    <div class="container">
+      <h2>About TradeNest</h2>
+      <p>TradeNest is an investing business based in Rudrapur, Uttarakhand. We focus on steady, disciplined growth with capital protection at the core.</p>
+      <div class="cards">
+        <div class="card"><h3>Consistent Discipline</h3><p>Structured strategies with predefined rules and risk caps.</p></div>
+        <div class="card"><h3>Capital Safety</h3><p>Focus on drawdown control and small, recoverable losses.</p></div>
+        <div class="card"><h3>Transparency</h3><p>Clear updates and tracking so you always know your status.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans" class="section">
+    <div class="container">
+      <h2>Investment Plans</h2>
+      <div class="cards">
+        <div class="card"><h3>Gold</h3><p><em>Minimum:</em> ₹50,000</p><ul><li>Duration: 6 Month</li><li>Disciplined daily targets</li><li>Daily risk cap</li><li>Transparent updates</li></ul><p><a href="#contact" class="btn primary" style="width:100%;text-align:center">Invest in Gold</a></p></div>
+        <div class="card popular"><h3>Diamond</h3><p><em>Minimum:</em> ₹2,00,000</p><ul><li>Duration: 12 Months</li><li>Phase-wise compounding</li><li>Drawdown protection</li><li>Detailed monthly reporting</li></ul><p><a href="#contact" class="btn primary" style="width:100%;text-align:center">Invest in Diamond</a></p></div>
+        <div class="card"><h3>Custom</h3><p>Tailored to your goals</p><ul><li>Flexible capital &amp; tenure</li><li>Personalized risk profile</li><li>Dedicated support</li><li>On-demand reporting</li></ul><p><a href="#contact" class="btn primary" style="width:100%;text-align:center">Request Custom Plan</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="section alt">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="timeline">
+        <div class="step"><div class="n">1</div><h3>Contact &amp; KYC</h3><p>Reach out via form/WhatsApp. We understand your goals and complete KYC.</p></div>
+        <div class="step"><div class="n">2</div><h3>Choose Plan</h3><p>Select Gold, Diamond, or a Custom plan that suits your capital and timeline.</p></div>
+        <div class="step"><div class="n">3</div><h3>Secure Funding</h3><p>Transfer funds through approved channels. We set risk caps and start execution.</p></div>
+        <div class="step"><div class="n">4</div><h3>Track &amp; Withdraw</h3><p>Get transparent updates and periodic settlements as per plan terms.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact TradeNest</h2>
+      <div class="grid2">
+        
+<form action="https://formspree.io/f/xnnzrpvq" method="POST" class="card">
+  <div class="field">
+    <label for="name">Name</label>
+    <input name="name" required placeholder="Your name">
+  </div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input name="email" type="email" required placeholder="you@example.com">
+  </div>
+  <div class="field">
+    <label for="phone">Phone</label>
+    <input name="phone" required placeholder="+91 XXXXX XXXXX">
+  </div>
+  <div class="field">
+    <label for="message">Message</label>
+    <textarea name="message" rows="4" required placeholder="How can we help?"></textarea>
+  </div>
+  <button class="btn primary" type="submit" style="width:100%">Send Message</button>
+</form>
+
+        <div class="card">
+          <h3>Reach Us</h3>
+          <p><strong>Phone:</strong> <a href="tel:+919286124789">+91 92861 24789</a><br>
+             <strong>Email:</strong> <a href="mailto:tradenest.invest@gmail.com">tradenest.invest@gmail.com</a><br>
+             <strong>Office:</strong> Fulsunga, Rudrapur, Uttarakhand, India</p>
+          <p><a class="btn" href="https://maps.google.com" target="_blank" rel="noreferrer">Open Map</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+      <div><strong>TradeNest</strong><br/><span style="color:#bfdbfe">Smart Investment Solutions</span></div>
+      <div style="color:#94a3b8">© 2025 TradeNest. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form[action="https://formspree.io/f/xnnzrpvq"]');
+  form.addEventListener('submit', function(e) {
+    const name = form.querySelector('input[name="name"]');
+    const email = form.querySelector('input[name="email"]');
+    const phone = form.querySelector('input[name="phone"]');
+    const message = form.querySelector('textarea[name="message"]');
+    let valid = true;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let phonePattern = /^[0-9+\-\s]{8,}$/;
+
+    if (!name.value.trim()) { alert('Please enter your name'); valid = false; }
+    else if (!emailPattern.test(email.value)) { alert('Please enter a valid email'); valid = false; }
+    else if (!phonePattern.test(phone.value)) { alert('Please enter a valid phone number'); valid = false; }
+    else if (!message.value.trim()) { alert('Please enter a message'); valid = false; }
+
+    if (!valid) e.preventDefault();
+  });
+});
+</script>
+
+</body>
+</html>
